@@ -1,3 +1,4 @@
+import { left } from "@popperjs/core";
 import "../style/index.css";
 
 /**
@@ -45,7 +46,12 @@ function render(variables = {}) {
         </div>
     `;
 }
-let positionClass;
+
+let positionClass =
+  variables.socialMediaPosition === "position-left"
+    ? "position-left"
+    : "position-right";
+
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
